@@ -14,12 +14,12 @@ The core algorithm can be split into two parts:
 The recommender system uses collaborative filtering. The two parts are unified at the end to produce the final product.
 
 ### Finding the best profession
-To find the best profession for a student, I transformed the dataset by looking at previous similar students and see what professions they went into. A matrix of probabilities is computed for each profession and each possible feature combination of the student. The top profession is the prefession with the highest probability for a student with the features given.
+To find the best profession for a student, I transformed the dataset by looking at previous similar students and see what professions they went into. A matrix of probabilities is computed for each profession and each possible feature combination of the student. The top profession is the profession with the highest probability for a student with the features given.
 
-### Finding simliar professions
+### Finding similar professions
 Item-based collaborative filtering was used to find similar professions. I created a matrix filled with the cosine similarities between every pair of profession. The pair with the highest cosine score are the most similar. I then parsed out the matrix and stored the nine most similar professions for each profession. 
 
-Once a top profession is calculated, I simply get the nine most revelant professions from that cosine similarity matrix. 
+Once a top profession is calculated, I simply get the nine most relevant professions from that cosine similarity matrix. 
 
 ## Website
 https://ancient-beyond-95266.herokuapp.com/
